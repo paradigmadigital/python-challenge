@@ -1,4 +1,4 @@
-La Compañía Plateada S.A. necesita hacer un estudio de cuánta gente vive en cada región de Juego de Tornos. Para ello, hay que construir un proyecto basado en microservicios que permita consultar y dar de alta datos sobre personajes y lugares de Poniente a través de APIs.
+La Compañía Plateada S.A. necesita hacer un estudio de cuanta gente vive en cada región de Juego de Tornos. Para ello, hay que construir un proyecto basado en microservicios que permita consultar y dar de alta datos sobre personajes y lugares de Poniente a través de APIs.
 Su idea es la siguiente:
 - Un microservicio para los Personajes (CRUD).
 - Otro microservicio para los Lugares (CRUD).
@@ -21,7 +21,7 @@ Un compañero de La Compañía Plateada S.A. empezó el modelado de las APIs per
 ## Lugar Microservices
 El servicio "lugar" debe consultar en una base de datos los lugares y devolverlos, por ejemplo:
 
-lugar-microservice:8081/v1/places/
+place-microservice:8081/v1/places/
 ```json
 [
     {
