@@ -18,24 +18,24 @@ services:
       - postgres_places
   juego_de_tornos_api:
     restart: always
-    build: https://github.com/Borken/juego_de_tornos_microservice.git
+    build: ../juego_de_tornos_microservice
     ports:
-      - "8083:8083"
-    command: flask run --host=0.0.0.0 --port 8083
+      - "8080:8080"
+    command: flask run --host=0.0.0.0 --port 8080
     depends_on:
       - places_api
       - characters_api
   postgres_characters:
     restart: always
-    build: ./characters_microservice/postgresql
+    build: https://github.com/Borken/characters_microservice.git:postgresql
     volumes:
-      - /var/lib/postgresql
+      - /var/lib/postgresql_characters
     expose:
       - "5432"
   postgres_places:
     restart: always
-    build: ./places_microservice/postgresql
+    build: https://github.com/Borken/places_microservice.git:postgresql
     volumes:
-      - /var/lib/postgresql
+      - /var/lib/postgresql_places
     expose:
-      - "5431"
+      - "5432"
